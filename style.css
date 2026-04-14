@@ -1,0 +1,563 @@
+/* This removes default spacing all browsers add */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Sets the font for the whole page */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+/* Styles the navigation bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: #0f0f0f;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Your name on the left */
+.nav-logo {
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* The menu links on the right */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+/* Each link */
+.nav-links a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/* Link color when you hover over it */
+.nav-links a:hover {
+  color: #a78bfa;
+}
+
+/* ========================
+   HERO SECTION
+======================== */
+#hero {
+  min-height: 100vh;
+  background-color: #0f0f0f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Canvas sits behind all content */
+#particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Hero content sits above canvas */
+.hero-content {
+  max-width: 700px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-greeting {
+  color: #a78bfa;
+  font-size: 18px;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.hero-name {
+  font-size: 64px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.hero-role {
+  font-size: 22px;
+  color: #a78bfa;
+  margin-bottom: 12px;
+}
+
+.hero-sub {
+  font-size: 16px;
+  color: #888;
+  margin-bottom: 36px;
+}
+
+/* Stats row in hero */
+.hero-stats {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+/* Each stat box */
+.stat-box {
+  background-color: rgba(124, 58, 237, 0.15);
+  border: 1px solid #7c3aed;
+  border-radius: 12px;
+  padding: 16px 24px;
+  text-align: center;
+  min-width: 90px;
+  transition: transform 0.3s ease;
+}
+
+/* Stat box lifts on hover */
+.stat-box:hover {
+  transform: translateY(-4px);
+  background-color: rgba(124, 58, 237, 0.25);
+}
+
+/* The big number */
+.stat-num {
+  font-size: 26px;
+  font-weight: bold;
+  color: #a78bfa;
+  margin-bottom: 4px;
+}
+
+/* The label below */
+.stat-label {
+  font-size: 12px;
+  color: #888;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ========================
+   BUTTONS
+======================== */
+.btn-primary {
+  background-color: #7c3aed;
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #a78bfa;
+  padding: 14px 32px;
+  border-radius: 8px;
+  border: 2px solid #a78bfa;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background-color: #6d28d9;
+}
+
+.btn-outline:hover {
+  background-color: #a78bfa;
+  color: #fff;
+}
+
+/* ========================
+   REUSABLE STYLES
+======================== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+section {
+  padding: 80px 0;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #ffffff;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #7c3aed;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* ========================
+   ABOUT SECTION
+======================== */
+#about {
+  background-color: #111111;
+}
+
+.about-bio {
+  max-width: 780px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.about-bio p {
+  color: #aaa;
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 18px;
+}
+
+.highlight {
+  color: #a78bfa;
+  font-weight: bold;
+}
+
+.about-bio .btn-primary {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.about-bottom {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  margin-top: 20px;
+  align-items: flex-start;
+}
+
+.about-skills {
+  background-color: #1e1e2e;
+  border: 1px solid #7c3aed;
+  border-radius: 12px;
+  padding: 24px;
+  flex: 1.4;
+}
+
+.about-education {
+  background-color: #1e1e2e;
+  border: 1px solid #7c3aed;
+  border-radius: 12px;
+  padding: 24px;
+  flex: 1;
+}
+
+.about-skills h3,
+.about-education h3 {
+  font-size: 20px;
+  color: #a78bfa;
+  margin-bottom: 16px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-tags span {
+  background-color: #0f0f0f;
+  color: #a78bfa;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  border: 1px solid #7c3aed;
+}
+
+.edu-card {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.edu-degree {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.edu-college {
+  color: #a78bfa;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.edu-year {
+  color: #888;
+  font-size: 13px;
+}
+
+/* ========================
+   PROJECTS SECTION
+======================== */
+#projects {
+  background-color: #0f0f0f;
+}
+
+/* Responsive grid — 2 columns on wide screens */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+/* Each project card */
+.project-card {
+  background-color: #1e1e2e;
+  border: 1px solid #7c3aed;
+  border-radius: 12px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: transform 0.3s ease;
+}
+
+/* Card lifts up on hover */
+.project-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Featured cards — SIH and Thooran */
+.project-card.featured {
+  border: 2px solid #a78bfa;
+  background-color: #1a1a2e;
+}
+
+/* Small label at top of card */
+.project-tag {
+  font-size: 12px;
+  color: #a78bfa;
+  background-color: #0f0f0f;
+  border: 1px solid #7c3aed;
+  padding: 4px 12px;
+  border-radius: 20px;
+  width: fit-content;
+}
+
+/* Project title */
+.project-card h3 {
+  font-size: 18px;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* Project description */
+.project-card p {
+  color: #aaa;
+  font-size: 14px;
+  line-height: 1.7;
+  flex: 1;
+}
+
+/* Tech stack badges */
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-tech span {
+  background-color: #0f0f0f;
+  color: #a78bfa;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  border: 1px solid #7c3aed;
+}
+
+/* Button row at bottom of card */
+.project-links {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 6px;
+}
+
+/* Smaller buttons inside cards */
+.project-links .btn-primary,
+.project-links .btn-outline {
+  padding: 10px 20px;
+  font-size: 13px;
+}
+
+/* SIH badge next to button */
+.sih-badge {
+  background-color: #7c3aed;
+  color: #ffffff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+}
+/* Makes LinkedIn and GitHub links look like text not blue links */
+.contact-value a,
+a.contact-value {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a.contact-value:hover {
+  color: #a78bfa;
+}
+/* ========================
+   CONTACT SECTION
+======================== */
+#contact {
+  background-color: #111111;
+}
+
+/* Subtitle below heading */
+.contact-sub {
+  text-align: center;
+  color: #aaa;
+  font-size: 16px;
+  margin-top: -30px;
+  margin-bottom: 50px;
+}
+
+/* Two columns — info left, form right */
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* Each contact info row */
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+/* Icon circle */
+.contact-icon {
+  font-size: 24px;
+  background-color: #1e1e2e;
+  border: 1px solid #7c3aed;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Label like "Email", "GitHub" */
+.contact-label {
+  color: #a78bfa;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+/* Actual value like email address */
+.contact-value {
+  color: #ffffff;
+  font-size: 15px;
+}
+
+/* Form inputs */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  background-color: #1e1e2e;
+  border: 1px solid #7c3aed;
+  border-radius: 8px;
+  padding: 14px 18px;
+  color: #ffffff;
+  font-size: 15px;
+  margin-bottom: 16px;
+  outline: none;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Input focus glow */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #a78bfa;
+}
+
+/* Placeholder text color */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #555;
+}
+
+/* Send button full width */
+.contact-form .btn-primary {
+  width: 100%;
+  text-align: center;
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Success or error message */
+#formMsg {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 14px;
+  color: #a78bfa;
+}
+
+/* ========================
+   FOOTER
+======================== */
+footer {
+  background-color: #0f0f0f;
+  text-align: center;
+  padding: 24px;
+  color: #555;
+  font-size: 14px;
+}
+/* ========================
+   SCROLL ANIMATIONS
+======================== */
+
+/* Hidden state — before animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+/* Visible state — after animation triggers */
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
