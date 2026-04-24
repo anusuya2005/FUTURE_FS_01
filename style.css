@@ -47,6 +47,38 @@ nav {
   color: #a78bfa;
 }
 
+/* Hamburger button — hidden on desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+  z-index: 200;
+}
+
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Animate hamburger to X when open */
+.hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 /* ========================
    HERO SECTION
 ======================== */
@@ -512,6 +544,7 @@ section {
   border: none;
   cursor: pointer;
 }
+
 .contact-icon {
   font-size: 22px;
   min-width: 24px;
@@ -524,22 +557,6 @@ section {
   text-align: center;
   font-size: 14px;
   color: #a78bfa;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .contact-wrapper {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .contact-info-title {
-    text-align: center;
-  }
-
-  .social-icon-btn {
-    justify-content: flex-start;
-  }
 }
 
 /* ========================
@@ -565,4 +582,189 @@ footer {
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ========================
+   MOBILE RESPONSIVE
+======================== */
+@media (max-width: 768px) {
+
+  /* --- NAV --- */
+  nav {
+    padding: 16px 20px;
+    position: sticky;
+    top: 0;
+  }
+
+  /* Show hamburger on mobile */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Mobile nav menu — slides down when open */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #0f0f0f;
+    padding: 10px 0 20px;
+    border-top: 1px solid #2a2a2a;
+    z-index: 99;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 14px 24px;
+    font-size: 16px;
+    border-bottom: 1px solid #1a1a1a;
+    color: #ccc;
+  }
+
+  .nav-links a:hover {
+    background-color: rgba(124, 58, 237, 0.15);
+    color: #a78bfa;
+  }
+
+  /* --- HERO --- */
+  .hero-name {
+    font-size: 38px;
+  }
+
+  .hero-role {
+    font-size: 18px;
+  }
+
+  .hero-greeting {
+    font-size: 14px;
+  }
+
+  .hero-sub {
+    font-size: 14px;
+  }
+
+  .hero-stats {
+    gap: 12px;
+  }
+
+  .stat-box {
+    padding: 12px 16px;
+    min-width: 80px;
+  }
+
+  .stat-num {
+    font-size: 22px;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    padding: 12px 22px;
+    font-size: 14px;
+  }
+
+  /* --- CONTAINER --- */
+  .container {
+    padding: 0 20px;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 28px;
+    margin-bottom: 36px;
+  }
+
+  /* --- ABOUT --- */
+  .about-bio p {
+    font-size: 15px;
+  }
+
+  .about-bottom {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about-skills,
+  .about-education {
+    width: 100%;
+    flex: unset;
+  }
+
+  .skill-tags span {
+    font-size: 13px;
+    padding: 6px 14px;
+  }
+
+  /* --- PROJECTS --- */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+
+  .project-links {
+    flex-wrap: wrap;
+  }
+
+  .project-links .btn-primary,
+  .project-links .btn-outline {
+    flex: 1;
+    text-align: center;
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  /* --- CONTACT --- */
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .contact-info-title {
+    text-align: center;
+  }
+
+  .contact-sub {
+    font-size: 14px;
+    margin-top: -20px;
+    margin-bottom: 36px;
+    padding: 0 10px;
+  }
+
+  .social-icon-btn {
+    justify-content: flex-start;
+  }
+
+}
+
+/* Extra small phones */
+@media (max-width: 400px) {
+  .hero-name {
+    font-size: 30px;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat-box {
+    width: 80%;
+  }
 }

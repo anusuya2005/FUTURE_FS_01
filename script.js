@@ -125,3 +125,21 @@ window.addEventListener('resize', () => {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 });
+// ========================
+// HAMBURGER MENU
+// ========================
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  navLinks.classList.toggle('open');
+});
+
+// Close menu when any nav link is clicked
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    navLinks.classList.remove('open');
+  });
+});
