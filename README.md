@@ -57,3 +57,34 @@ FUTURE_FS_01/
 ├── thooran-report.pdf      # Thooran project report
 ├── bluechain-report.pdf    # BlueChain SIH 2025 project report
 └── Screenshots/            # Screenshots folder
+```
+
+---
+
+## 📸 Screenshots
+
+### Home
+![Home](Screenshots/home.png)
+
+### About
+![About](Screenshots/About.png)
+
+### Project
+![Project](Screenshots/project.png)
+
+### Contact
+![Contact](Screenshots/Contact.png)
+
+---
+
+## 📬 Contact
+
+- Email: anusuya200515@gmail.com  
+- GitHub: https://github.com/anusuya2005  
+- LinkedIn: https://linkedin.com/in/anusuya-v-5b548a303  
+
+---
+
+## 🏁 Conclusion
+
+This project helped me understand the complete process of designing, developing, and deploying a responsive portfolio website.
