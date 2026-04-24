@@ -59,13 +59,13 @@ FUTURE_FS_01/
 ## 📸 Screenshots
 
 ### Home
-![Home](screenshots/home.png)
+![Home](Screenshots/home.png)
 
 ### About
-![About](screenshots/about.png)
+![About](Screenshots/About.png)
 
-### Projects
-![Projects](screenshots/projects.png)
+### Project
+![Project](Screenshots/project.png)
 
 ### Contact
-![Contact](screenshots/contact.png)
+![Contact](Screenshots/Contact.png)
