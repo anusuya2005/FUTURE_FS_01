@@ -56,3 +56,16 @@ FUTURE_FS_01/
 ├── README.md               # Project documentation
 ├── thooran-report.pdf      # Thooran project report
 └── bluechain-report.pdf    # BlueChain SIH 2025 project report
+## 📸 Screenshots
+
+### Home
+![Home](screenshots/home.png)
+
+### About
+![About](screenshots/about.png)
+
+### Projects
+![Projects](screenshots/projects.png)
+
+### Contact
+![Contact](screenshots/contact.png)
