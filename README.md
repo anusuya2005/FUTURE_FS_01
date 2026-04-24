@@ -55,17 +55,5 @@ FUTURE_FS_01/
 ├── script.js               # JavaScript functionality
 ├── README.md               # Project documentation
 ├── thooran-report.pdf      # Thooran project report
-└── bluechain-report.pdf    # BlueChain SIH 2025 project report
-## 📸 Screenshots
-
-### Home
-![Home](Screenshots/home.png)
-
-### About
-![About](Screenshots/About.png)
-
-### Project
-![Project](Screenshots/project.png)
-
-### Contact
-![Contact](Screenshots/Contact.png)
+├── bluechain-report.pdf    # BlueChain SIH 2025 project report
+└── Screenshots/            # Screenshots folder
